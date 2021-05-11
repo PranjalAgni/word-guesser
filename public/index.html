@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Word Garden</title>
+</head>
+<body>
+  <main>
+    <div class="logo">
+      <img src="https://i.imgur.com/1JpGn3L.png" width="100%">
+    </div>
+
+    <div id="letters"></div>
+    
+    <form id="guessing">
+      <input id="guess" maxlength="1" type="text">
+      <button type="submit" id="submit-guess" class="team-select">Guess</button>
+    </form>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

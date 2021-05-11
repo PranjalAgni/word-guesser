@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 5%);
+  color: hsl(0, 0%, 95%);
+  font-family: sans-serif;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+logo {
+  width: 200px;
+  margin: auto;
+}
+
+#guessing {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+#guessing input {
+  font-size: 36px;
+  width: 10%;
+}
