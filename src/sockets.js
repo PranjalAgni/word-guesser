@@ -1,9 +1,9 @@
 const socketIO = require("socket.io");
-const { connectionListener } = require("./listeners");
+const gameListeners = require("./listeners");
 
 const initalizeSocket = (server) => {
   const io = socketIO(server);
-  connectionListener(io);
+  gameListeners(io);
 };
 
 module.exports = initalizeSocket;
