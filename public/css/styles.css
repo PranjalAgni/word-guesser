@@ -17,9 +17,100 @@ body {
   overflow: hidden;
 }
 
-logo {
+.logo {
   width: 200px;
   margin: auto;
+}
+
+#pre-game {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#pre-game .team-name {
+  display: none;
+}
+
+.team-name span {
+  color: hsl(270, 100%, 78%);
+  font-size: 0.9em;
+  background: hsl(0, 0%, 12%);
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+#pre-game.team-selected button {
+  display: none;
+}
+
+#pre-game.team-selected .team-name {
+  display: block;
+}
+
+.team-select {
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.team-select h1 {
+  text-align: center;
+}
+
+.team-list {
+  padding: 6px;
+  background: hsl(0, 0%, 12%);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.team-list div {
+  padding: 4px;
+  background: hsl(0, 0%, 16%);
+  border-radius: 2px;
+}
+
+.team-list div:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+button {
+  font-size: 36px;
+  background: hsl(270, 60%, 45%);
+  color: hsl(0, 0%, 100%);
+  padding: 8px 22px;
+  border: 2px solid hsl(270, 100%, 24%);
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+}
+
+button:hover {
+  background: rgb(135, 62, 207);
+}
+
+button:active {
+  background: rgb(164, 87, 241);
+}
+
+#letters {
+  display: flex;
+  justify-content: center;
+  font-size: 2.75vmin;
+  margin: 3rem;
+}
+
+.letter {
+  width: 2.75vmin;
+  text-align: center;
+  padding: 4px;
+  background: hsl(0, 0%, 12%);
+}
+
+.letter:not(:last-child) {
+  margin-right: 2px;
 }
 
 #guessing {
@@ -32,4 +123,11 @@ logo {
 #guessing input {
   font-size: 36px;
   width: 10%;
+}
+
+#event-log {
+  height: 20vh;
+  overflow: scroll;
+  font-family: monospace;
+  font-size: 1.5rem;
 }
