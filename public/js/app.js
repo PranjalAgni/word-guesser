@@ -19,7 +19,7 @@ buttons.forEach((button) => {
     socket.emit("join-team", { teamId });
     localState.teamId = teamId;
 
-    preGame.classList.add("team-select");
+    // preGame.classList.add("team-select");
   });
 });
 
@@ -39,6 +39,10 @@ socket.on("connect", () => {
   if (localState.teamId) {
     socket.emit("join-team", { teamId: localState.teamId });
   }
+
+  socket.emit("game-state", "", (state) => {
+    updateGame(state);
+  });
 });
 
 const updateTeamList = (state, element, teamId) => {
